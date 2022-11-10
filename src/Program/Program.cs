@@ -44,8 +44,8 @@ namespace Program
             sumaPersonaVisitor.Visit(n1);
             Console.WriteLine($"La edad total de los integrantes del árbol es {sumaPersonaVisitor.sumaTotal}.");
             SumaPersonaVisitor<Persona> sumaPersonaVisitor2=new SumaPersonaVisitor<Persona>();
-            sumaPersonaVisitor2.Visit(n6);
-            Console.WriteLine($"La edad total de los integrantes del árbol es {sumaPersonaVisitor.sumaTotal}.");
+            sumaPersonaVisitor2.Visit(n4);
+            Console.WriteLine($"La edad total de los integrantes del árbol es {sumaPersonaVisitor2.sumaTotal}.");
 
             
             
