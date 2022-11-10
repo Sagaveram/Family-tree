@@ -8,14 +8,14 @@ namespace Program
         static void Main(string[] args)
         {
             Persona persona1=new Persona("Jorge",10);
-            Persona persona2=new Persona("Juan",10);
-            Persona persona3=new Persona("Julian",10);
-            Persona persona4=new Persona("Roberto",10);
-            Persona persona5=new Persona("Marcos",10);
-            Persona persona6=new Persona("Andres",10);
-            Persona persona7=new Persona("Martina",10);
-            Persona persona8=new Persona("Camila",10);
-            Persona persona9=new Persona("Gervasio",10);
+            Persona persona2=new Persona("Juan",11);
+            Persona persona3=new Persona("Julian",12);
+            Persona persona4=new Persona("Roberto",13);
+            Persona persona5=new Persona("Marcos",20);
+            Persona persona6=new Persona("Andres",15);
+            Persona persona7=new Persona("Martina",16);
+            Persona persona8=new Persona("Camila",17);
+            Persona persona9=new Persona("Gervasio",18);
             
 
             Node<Persona> n1 = new Node<Persona>(persona1);
@@ -46,6 +46,14 @@ namespace Program
             SumaPersonaVisitor<Persona> sumaPersonaVisitor2=new SumaPersonaVisitor<Persona>();
             sumaPersonaVisitor2.Visit(n4);
             Console.WriteLine($"La edad total de los integrantes del árbol es {sumaPersonaVisitor2.sumaTotal}.");
+
+            NombreVisitor<Persona> nombreVisitor=new NombreVisitor<Persona>();
+            nombreVisitor.Visit(n1);
+            Console.WriteLine($"El nombre más largo es {nombreVisitor.Nombremaslargo}.");
+
+            GrandeVisitor<Persona> grandeVisitor=new GrandeVisitor<Persona>();
+            grandeVisitor.Visit(n1);
+            Console.WriteLine($"El nombre más largo es {grandeVisitor.Mayor}.");
 
             
             
