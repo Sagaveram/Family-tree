@@ -7,14 +7,14 @@ namespace Library
 {
     public class NombreVisitor<Persona> : Visitor<Persona>
     {
-        public int sumaTotal{get;set;}
+        public string Nombremaslargo="";
+        
         public override void Visit(Node<Persona> node)
         {
-            sumaTotal=sumaTotal+node.persona.edad;
+            if(node.persona.nombre.Length>Nombremaslargo.Length)
+            Nombremaslargo=node.persona.nombre;
             foreach(Node<Persona> children in node.Children)
-            {
-                Persona p=children.Valor;  
-                
+            {  
                 children.Accept(this);
 
             }

@@ -7,13 +7,20 @@ namespace Library
 {
     public class GrandeVisitor<Persona> : Visitor<Persona>
     {
+        public int Mayoredad=0;
+        public string Mayor="";
         public override void Visit(Node<Persona> node)
         {
-            
+            if(node.persona.edad>Mayoredad)
+            {
+                Mayoredad=node.persona.edad;
+                Mayor=node.persona.nombre;
+            }
             foreach(Node<Persona> children in node.Children)
             {
-                Persona p=children.Valor;  
+                
                 children.Accept(this);
+            
 
             }
             

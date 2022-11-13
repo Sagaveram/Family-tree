@@ -11,10 +11,9 @@ namespace Library
         {
             this.persona=persona;
 
+        
         }
         
-
-        public T Valor{get;set;}
         private List<Node<T>> children = new List<Node<T>>();
 
 

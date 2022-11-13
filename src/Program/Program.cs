@@ -53,7 +53,7 @@ namespace Program
 
             GrandeVisitor<Persona> grandeVisitor=new GrandeVisitor<Persona>();
             grandeVisitor.Visit(n1);
-            Console.WriteLine($"El nombre más largo es {grandeVisitor.Mayor}.");
+            Console.WriteLine($"La persona mayor es {grandeVisitor.Mayor}.");
 
             
             
